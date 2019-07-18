@@ -1,16 +1,16 @@
 # Voerro Vue Tags Input v2 
-## With some new futures
 
-[![npm (scoped)](https://img.shields.io/npm/v/@voerro/vue-tagsinput.svg?style=flat-square)](https://www.npmjs.com/package/@voerro/vue-tagsinput)
-[![npm](https://img.shields.io/npm/dm/@voerro/vue-tagsinput.svg?style=flat-square)](https://www.npmjs.com/package/@voerro/vue-tagsinput)
-[![MIT](https://img.shields.io/github/license/AlexMordred/vue-tagsinput.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+This fork of [*Voerro Vue Tags*](https://github.com/voerro/vue-tagsinput) with experimental ideas and features.
+> Thanks Alexander Zavyalov for work 
 
-A simple tags input with typeahead built with Vue.js 2.
-
+### Experimental ideas and features 
+1. Added description field (available only for dropdown mode)
+2. Added icon for result of tag (available only for dropdown mode)
+### Demo
 ![](demo.gif)
-![](demo2.gif)
+![](demo3.gif)
 
-[**Live Demo**](https://voerro.github.io/vue-tagsinput/)
+[**Live Demo**](https://bigtows.github.io/vue-tagsinput/)
 
 ## Installation via NPM
 
@@ -26,35 +26,9 @@ Then register the component with Vue:
 
 ```javascript
 import VoerroTagsInput from '@voerro/vue-tagsinput';
-
+import '@voerro/vue-tagsinput/dist/style.css'; // Or you can use custom css file based on this
 Vue.component('tags-input', VoerroTagsInput);
 ```
-
-Include the `dist/style.css` file on your page to apply the styling. You can use CDN, `require()` it inside your JS code, or `@include` it inside your (S)CSS assets. Read the `Styling` section to learn how to customize the appearance.
-
-## Installation via CDN
-
-If you're not using NPM, you can include the required files into your page manually from a CDN. Don't forget to include Vue as well. For example:
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@voerro/vue-tagsinput@1.8.0/dist/voerro-vue-tagsinput.js"></script>
-
-<script>
-    new Vue({
-        el: '#app',
-        components: { "v-tags-input": VoerroTagsInput },
-    });
-</script>
-```
-
-Include the CSS file on your page to apply the styling. Read the `Styling` section to learn how to customize the appearance.
-
-```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@voerro/vue-tagsinput@2.0.0/dist/style.css">
-```
-
-**IMPORTANT:** Always grab the latest versions of the package from [JSDELIVR](https://www.jsdelivr.com/package/npm/@voerro/vue-tagsinput?path=dist), the ones provided in the examples above might be outdated. Same goes for Vue.js.
 
 ## Usage
 
