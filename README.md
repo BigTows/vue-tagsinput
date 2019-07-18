@@ -35,10 +35,26 @@ Vue.component('tags-input', VoerroTagsInput);
 ```html
 <tags-input element-id="tags"
     v-model="selectedTags"
-    :existing-tags="[
-        { key: 'web-development', value: 'Web Development' },
-        { key: 'php', value: 'PHP' },
-        { key: 'javascript', value: 'JavaScript' },
+    :existing-tags="[{ 
+          key: 'web-development',
+          value: 'Web Development',
+          icon: '../icons/web.png'
+        },
+        { 
+          key: 'php', 
+          value: 'PHP',
+          icon: function(){
+              return '../icons/php.png'
+          },
+          description: 'version 7.1'
+        },
+        { 
+          key: 'javascript', 
+          value: 'JavaScript',
+          description: function() {
+              return 'ECMAScript 6'
+          } 
+        },
     ]"
     :typeahead="true"></tags-input>
 ```
@@ -238,9 +254,9 @@ A pretty serious bug (#53) was fixed in `v2.0.0`. The data format for the `exist
 
 ## Contribution
 
-Everyone is welcome to contribute. When making a contribution, please base your branch off of `dev` and merge it into `dev` as well. Thank you!
+Todo....
 
-## Support
+## Support original author
 
 This software is absolutely free to use and is developed in the author's free time. If you found this software useful and would like to say thank you to the author, please consider making a donation. It's not the amount, it's the gesture.
 
