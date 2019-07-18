@@ -1,4 +1,5 @@
-# Voerro Vue Tags Input v2
+# Voerro Vue Tags Input v2 
+## With some new futures
 
 [![npm (scoped)](https://img.shields.io/npm/v/@voerro/vue-tagsinput.svg?style=flat-square)](https://www.npmjs.com/package/@voerro/vue-tagsinput)
 [![npm](https://img.shields.io/npm/dm/@voerro/vue-tagsinput.svg?style=flat-square)](https://www.npmjs.com/package/@voerro/vue-tagsinput)

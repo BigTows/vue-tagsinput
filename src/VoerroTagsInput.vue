@@ -54,11 +54,16 @@
             v-bind:class="{
                     'tags-input-typeahead-item-default': index != searchSelection,
                     'tags-input-typeahead-item-highlighted-default': index == searchSelection
-                }">{{tag.value}}
-          <p v-if="tag.description !== undefined"
-             v-html="tag.description"
-             :class="`typeahead-${typeaheadStyle}`-description">
-          </p>
+                }">
+          <img v-if="tag.iconUrl !== undefined"
+               :src="tag.iconUrl"
+               :class="`typeahead-${typeaheadStyle}-icon`"
+          >
+          <div :class="`typeahead-${typeaheadStyle}-text`" > {{tag.value}}</div>
+          <div v-if="tag.descriptionText !== undefined"
+               v-html="tag.descriptionText"
+               :class="`typeahead-${typeaheadStyle}-description`">
+          </div>
         </li>
       </ul>
     </div>
@@ -82,6 +87,15 @@
         default: () => {
           return [];
         }
+      },
+
+      description: {
+        type: String,
+        default: undefined
+      },
+      icon: {
+        type: String,
+        default: undefined
       },
 
       typeahead: {
@@ -382,6 +396,19 @@
                 : tag.value.toLowerCase();
 
               if (compareable.search(searchQuery) > -1 && !this.tagSelected(tag)) {
+
+                if (tag.icon instanceof Function) {
+                  tag.iconUrl = tag.icon.call(this);
+                } else {
+                  tag.iconUrl = tag.icon;
+                }
+
+                if (tag.description instanceof Function) {
+                  tag.descriptionText = tag.description.call(this);
+                } else {
+                  tag.descriptionText = tag.description;
+                }
+
                 this.searchResults.push(tag);
               }
             }

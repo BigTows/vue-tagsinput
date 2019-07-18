@@ -108,9 +108,24 @@
   cursor: pointer;
 }
 
+.typeahead-dropdown-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.tags-input-typeahead-item-highlighted-default > .typeahead-dropdown-description{
+  color: #e4e4e4;
+}
+
+.typeahead-dropdown-text {
+  display: inline-block;
+}
+
 .typeahead-dropdown-description {
-  color: #454545;
-  font-size: 14px;
+  color: #a5a4a5;
+  font-size: 15px;
+  display: block;
+  margin-left: 28px;
 }
 
 /* Typeahead elements style/theme */
