@@ -15,11 +15,11 @@ A simple tags input with typeahead built with Vue.js 2.
 ## Installation via NPM
 
 ```
-npm i @voerro/vue-tagsinput --save-dev
+npm i https://github.com/BigTows/vue-tagsinput --save-dev
 ```
 or
 ```
-npm i @voerro/vue-tagsinput --save
+npm i https://github.com/BigTows/vue-tagsinput --save
 ```
 
 Then register the component with Vue:
